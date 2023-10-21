@@ -71,3 +71,12 @@ $(document).ready(function(){
         }
     });
 });
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbx-DvwgtZZGYPrG9ebPJdZ0RZnHUanpFpOxuDsiMofAvcjQtLN-6Qg3Wc0nPyLLkMLF/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Your data been successfully submitted"))
+                .catch(error => console.error('Error!', error.message))
+            })
