@@ -23,12 +23,12 @@ const HeroSection = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
-            <Link href="/ShubhamChoudhary_CV.pdf" target="_blank" rel="noopener noreferrer" download>
-              Download CV <Download className="ml-2 h-5 w-5" />
+            <Link href="/ShubhamChoudhary_CV.pdf" target="_blank" rel="noopener noreferrer">
+              View CV <Download className="ml-2 h-5 w-5" />
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
-            <Link href="https://github.com/shubhamchoudharyjr" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/JRshubhu12" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" /> GitHub
             </Link>
           </Button>
