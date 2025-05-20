@@ -170,6 +170,19 @@ export const skillsData: SkillCategory[] = [
 
 export const experienceData: Experience[] = [
   {
+    id: 'raktacure-dev',
+    title: 'Full Stack Developer',
+    company: 'Raktacure',
+    duration: 'November 2024 – Present',
+    responsibilities: [
+      'Developing and maintaining core features for the Raktacure platform, focusing on both front-end (React, Material UI) and back-end (Node.js, Express) components.',
+      'Integrating Firebase services for real-time data synchronization and user authentication.',
+      'Collaborating with the team to design and implement new functionalities for improved user experience in blood donation and recipient matching.',
+      'Ensuring application scalability and performance.',
+    ],
+    learnings: 'Further developing expertise in full-stack development with a focus on real-time applications using React, Node.js, and Firebase. Contributing to a socially impactful project by enhancing features for efficient blood donation and management.',
+  },
+  {
     id: 'cetpa',
     title: 'AI/ML Intern',
     company: 'CETPA Infotech Pvt. Ltd.',
