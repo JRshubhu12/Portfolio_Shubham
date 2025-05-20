@@ -23,7 +23,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-5 gap-8 items-center">
           <div className="md:col-span-2 flex justify-center">
             <Image
-              src="/profile.jpg"
+              src="/images/profile.jpg"
               alt="Shubham Choudhary"
               data-ai-hint="professional portrait"
               width={300}
