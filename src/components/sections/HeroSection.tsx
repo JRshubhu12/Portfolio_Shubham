@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Github } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -16,21 +16,27 @@ const HeroSection = () => {
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
           Passionate about crafting elegant and efficient applications that solve real-world problems and drive innovation.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-wrap justify-center items-center gap-4">
           <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
             <Link href="#projects">
               View My Work <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/ShubhamChoudhary_CV.pdf" target="_blank" rel="noopener noreferrer" download>
+              Download CV <Download className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="https://github.com/shubhamchoudharyjr" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-5 w-5" /> GitHub
+            </Link>
+          </Button>
+          <Button asChild variant="secondary" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
             <Link href="#contact">
               Contact Me
             </Link>
           </Button>
-          {/* Optional: Download CV button */}
-          {/* <Button variant="secondary" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
-            Download CV <Download className="ml-2 h-5 w-5" />
-          </Button> */}
         </div>
       </div>
     </section>
