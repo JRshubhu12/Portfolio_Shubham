@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <Card className="group flex flex-col h-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105">
       <CardHeader>
         <div className="aspect-video relative w-full overflow-hidden rounded-t-md">
           <Image
