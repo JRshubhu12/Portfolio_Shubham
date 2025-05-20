@@ -1,3 +1,4 @@
+
 import type { Project, SkillCategory, Experience } from '@/types';
 
 export const projectsData: Project[] = [
@@ -104,10 +105,10 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: 'JavaScript', level: 90 },
       { name: 'Python', level: 85 },
-      { name: 'Java', level: 75 },
       { name: 'TypeScript', level: 80 },
       { name: 'HTML', level: 95 },
       { name: 'CSS', level: 90 },
+      { name: 'MERN Stack', level: 85 },
     ],
   },
   {
