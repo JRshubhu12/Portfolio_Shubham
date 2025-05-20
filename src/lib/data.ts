@@ -130,7 +130,7 @@ export const skillsData: SkillCategory[] = [
     name: 'Mobile Development',
     skills: [
       { name: 'React Native', level: 80 },
-      { name: 'Android Studio (Java/Kotlin)', level: 70 },
+      { name: 'Flutter', level: 70 },
       { name: 'Capacitor', level: 60 },
     ],
   },
