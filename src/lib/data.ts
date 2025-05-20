@@ -13,6 +13,7 @@ export const projectsData: Project[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'medical app',
     githubLink: 'https://github.com/shubhamchoudharyjr/raktacure',
+    liveLink: 'https://raktacure.ai/',
   },
   {
     id: 'careerdive',
@@ -25,6 +26,7 @@ export const projectsData: Project[] = [
     impact: 'Connected numerous job seekers with potential employers.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'web platform',
+    liveLink: 'https://www.careerdive.in/',
   },
   {
     id: 'axesflow',
@@ -37,6 +39,7 @@ export const projectsData: Project[] = [
     impact: 'Reduced manual effort in repetitive tasks by 40% for client businesses.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'dashboard interface',
+    liveLink: 'https://www.axesflow.com/',
   },
   {
     id: 'sentiment-analysis',
@@ -79,6 +82,7 @@ export const projectsData: Project[] = [
     impact: 'Achieved 90% career match accuracy. Provides comprehensive support from resume optimization to mentorship for users.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'AI career guidance',
+    liveLink: 'https://teloos.in/',
   },
   {
     id: 'quote-app',
