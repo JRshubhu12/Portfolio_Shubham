@@ -23,12 +23,12 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-5 gap-8 items-center">
           <div className="md:col-span-2 flex justify-center">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="/profile.jpg"
               alt="Shubham Choudhary"
               data-ai-hint="professional portrait"
               width={300}
               height={300}
-              className="rounded-full shadow-2xl border-4 border-primary"
+              className="rounded-full shadow-2xl border-4 border-primary object-cover"
               priority
             />
           </div>

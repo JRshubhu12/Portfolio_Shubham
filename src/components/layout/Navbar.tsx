@@ -34,7 +34,6 @@ const Navbar = () => {
     if (href === '#projects') return <Lightbulb className="w-5 h-5" />;
     if (href === '#skills') return <Code className="w-5 h-5" />;
     if (href === '#experience') return <BarChartBig className="w-5 h-5" />;
-    if (href === '#analyzer') return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/><path d="M2 14h2"/><path d="M12 2v2"/><path d="M20 14h2"/><path d="m20 7-1.5-1.5"/><path d="m4 7 1.5-1.5"/></svg>; // Brain icon
     if (href === '#contact') return <Send className="w-5 h-5" />;
     return null;
   };
