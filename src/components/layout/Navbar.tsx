@@ -9,6 +9,7 @@ import { navLinks } from '@/lib/data';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,7 @@ const Navbar = () => {
           break;
         }
       }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -44,12 +46,12 @@ const Navbar = () => {
         <Link
           href={link.href}
           onClick={() => mobile && setIsOpen(false)}
-          className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors
+          className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ease-in-out
             ${activeSection === link.href.substring(1)
-              ? 'bg-primary text-primary-foreground'
-              : 'text-foreground hover:bg-accent hover:text-accent-foreground'
+              ? 'bg-primary text-primary-foreground shadow-md scale-105'
+              : 'text-foreground hover:bg-accent/80 hover:text-accent-foreground hover:scale-105'
             }
-            ${mobile ? 'w-full' : ''}
+            ${mobile ? 'w-full text-base' : ''}
           `}
         >
           {getIcon(link.href)}
@@ -61,16 +63,19 @@ const Navbar = () => {
 
 
   return (
-    <nav className="sticky top-0 z-50 bg-card/80 backdrop-blur-md shadow-md">
+    <nav 
+      className={`sticky top-0 z-50 transition-all duration-300 ease-in-out 
+      ${isScrolled ? 'bg-card/90 backdrop-blur-lg shadow-xl' : 'bg-card/70 backdrop-blur-md shadow-md'}`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="#home" className="text-2xl font-bold text-primary">
+            <Link href="#home" className="text-2xl font-bold text-primary transition-transform hover:scale-105">
               Shubham Choudhary
             </Link>
           </div>
           <div className="hidden md:block">
-            <ul className="ml-10 flex items-baseline space-x-4">
+            <ul className="ml-10 flex items-baseline space-x-1 lg:space-x-2">
               <NavLinkItems />
             </ul>
           </div>
@@ -80,6 +85,7 @@ const Navbar = () => {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
+              className="text-foreground hover:text-primary"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -87,8 +93,8 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-card shadow-lg p-4">
-          <ul className="space-y-2">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-card shadow-2xl p-4 rounded-b-lg border-t border-border">
+          <ul className="space-y-3">
             <NavLinkItems mobile={true} />
           </ul>
         </div>
