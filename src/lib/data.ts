@@ -11,7 +11,7 @@ export const projectsData: Project[] = [
     features: ['User registration & profiles', 'Blood donation camp scheduling', 'Urgent blood requests', 'Inventory management'],
     technologies: ['React', 'Node.js', 'Express', 'Firebase', 'Material UI'],
     impact: 'Facilitated faster blood matching for critical patients.',
-    imageUrl: '/images/Raktacure.png',
+    imageUrl: '/images/raktacure-project-new.jpg',
     imageHint: 'medical technology',
     githubLink: 'https://github.com/shubhamchoudharyjr/raktacure',
     liveLink: 'https://raktacure.ai/',
@@ -84,6 +84,25 @@ export const projectsData: Project[] = [
     imageUrl: '/images/teloos.png',
     imageHint: 'AI career guidance',
     liveLink: 'https://teloos.in/',
+  },
+  {
+    id: 'cravemate',
+    title: 'CraveMate: AI Food Suggester',
+    category: 'AI/Machine Learning Applications',
+    role: 'Lead Developer & AI Architect',
+    problemSolved: 'Solves the "What to eat?" dilemma using AI to provide personalized dish recommendations based on cravings, mood, and time.',
+    features: [
+      'AI-driven recommendations for dishes to cook or order.',
+      'Accepts text and voice input for user cravings/mood.',
+      'Personalizes suggestions over time based on user feedback.',
+      'Integrates with food delivery platforms (conceptual).',
+      'Modern, responsive UI for intuitive interaction.',
+    ],
+    technologies: ['React', 'Next.js', 'Tailwind CSS', 'Node.js', 'Express', 'Genkit', 'Firebase'],
+    impact: 'Makes meal decisions quick, easy, and enjoyable by offering smart, tailored food suggestions.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'food app AI',
+    liveLink: 'https://bit.ly/CarveMate',
   },
   {
     id: 'quote-app',
@@ -219,3 +238,4 @@ export const navLinks = [
   { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
 ];
+
