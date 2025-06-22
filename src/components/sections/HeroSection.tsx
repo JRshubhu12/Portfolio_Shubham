@@ -6,8 +6,8 @@ import { ArrowRight, Download, Github } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 py-20 md:py-28"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -43,9 +43,15 @@ const HeroSection = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-            <Link href="/ShubhamChoudhary_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/images/shubham%20choudhary.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
               View CV <Download className="ml-2 h-5 w-5" />
-            </Link>
+            </a>
+
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
             <Link href="https://github.com/JRshubhu12" target="_blank" rel="noopener noreferrer">
