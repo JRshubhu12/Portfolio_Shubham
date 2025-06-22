@@ -8,9 +8,18 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 py-20 md:py-28"
+      className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 py-20 md:py-28 overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+      {/* Animated background lines container */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight animate-in fade-in slide-in-from-top-12 duration-700 ease-out">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-text-gradient">
             Shubham Choudhary
@@ -28,6 +37,85 @@ const HeroSection = () => {
           .animate-text-gradient {
             background-size: 200% 200%;
             animation: text-gradient 5s ease infinite;
+          }
+
+          @keyframes drift {
+            0% {
+              transform: translate(var(--start-x), var(--start-y)) rotate(var(--angle));
+              opacity: 0;
+            }
+            20% {
+              opacity: 0.7;
+            }
+            80% {
+              opacity: 0.7;
+            }
+            100% {
+              transform: translate(var(--end-x), var(--end-y)) rotate(var(--angle));
+              opacity: 0;
+            }
+          }
+
+          .line {
+            position: absolute;
+            background-color: hsl(var(--primary) / 0.1);
+            border-radius: 9999px;
+            --angle: 45deg;
+            animation: drift linear infinite;
+          }
+
+          .line:nth-child(1) {
+            width: 150px;
+            height: 2px;
+            --start-x: -20vw;
+            --start-y: 10vh;
+            --end-x: 120vw;
+            --end-y: 40vh;
+            animation-duration: 15s;
+            animation-delay: -2s;
+          }
+          .line:nth-child(2) {
+            width: 200px;
+            height: 3px;
+            --start-x: -30vw;
+            --start-y: 80vh;
+            --end-x: 130vw;
+            --end-y: 20vh;
+            animation-duration: 20s;
+            animation-delay: -5s;
+            --angle: -35deg;
+          }
+          .line:nth-child(3) {
+            width: 100px;
+            height: 1px;
+            --start-x: 120vw;
+            --start-y: 90vh;
+            --end-x: -20vw;
+            --end-y: 30vh;
+            animation-duration: 25s;
+            animation-delay: -10s;
+          }
+          .line:nth-child(4) {
+            width: 250px;
+            height: 2px;
+            --start-x: 50vw;
+            --start-y: 110vh;
+            --end-x: 30vw;
+            --end-y: -10vh;
+            animation-duration: 18s;
+            animation-delay: -1s;
+             --angle: 60deg;
+          }
+           .line:nth-child(5) {
+            width: 180px;
+            height: 2px;
+            --start-x: -10vw;
+            --start-y: 50vh;
+            --end-x: 110vw;
+            --end-y: 60vh;
+            animation-duration: 22s;
+            animation-delay: -12s;
+             --angle: -20deg;
           }
         `}</style>
         <p className="text-xl md:text-2xl text-accent font-semibold mb-8 animate-in fade-in slide-in-from-top-16 duration-700 delay-200 ease-out">
