@@ -53,6 +53,7 @@ export const projectsData: Project[] = [
     impact: 'Empowering families to manage their health proactively with an all-in-one digital solution.',
     imageUrl: '/images/digital-health-bharat.png',
     imageHint: 'digital healthcare',
+    liveLink: 'https://www.digitalhealthbharat.com/',
   },
   {
     id: 'sentiment-analysis',
@@ -250,4 +251,3 @@ export const navLinks = [
   { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
 ];
-
