@@ -43,6 +43,18 @@ export const projectsData: Project[] = [
     liveLink: 'https://www.axesflow.com/',
   },
   {
+    id: 'digital-health-bharat',
+    title: 'Digital Health Bharat',
+    category: 'Full Stack Platforms',
+    role: 'Lead Developer',
+    problemSolved: 'To provide a comprehensive digital health platform for Indian families, making healthcare management simple and accessible.',
+    features: ['Secure medical document storage', 'AI-powered medicine reminders', 'Health AI for medication guidance', 'Nearby health facility locator', 'Health analytics and monitoring'],
+    technologies: ['React Native', 'React', 'Node.js', 'Express', 'Firebase', 'Genkit'],
+    impact: 'Empowering families to manage their health proactively with an all-in-one digital solution.',
+    imageUrl: '/images/digital-health-bharat.png',
+    imageHint: 'digital healthcare',
+  },
+  {
     id: 'sentiment-analysis',
     title: 'Sentiment Analysis',
     category: 'AI/Machine Learning Applications',
