@@ -10,13 +10,14 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 py-20 md:py-28 overflow-hidden"
     >
-      {/* Animated background lines container */}
+      {/* Animated space background container */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div className="planet planet-1"></div>
+        <div className="planet planet-2"></div>
+        <div className="planet planet-3"></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -39,83 +40,87 @@ const HeroSection = () => {
             animation: text-gradient 5s ease infinite;
           }
 
-          @keyframes drift {
-            0% {
-              transform: translate(var(--start-x), var(--start-y)) rotate(var(--angle));
-              opacity: 0;
-            }
-            20% {
-              opacity: 0.7;
-            }
-            80% {
-              opacity: 0.7;
-            }
-            100% {
-              transform: translate(var(--end-x), var(--end-y)) rotate(var(--angle));
-              opacity: 0;
-            }
+          @keyframes move-twink-back {
+              from {background-position:0 0;}
+              to {background-position:-10000px 5000px;}
           }
 
-          .line {
-            position: absolute;
-            background-color: hsl(var(--primary) / 0.1);
-            border-radius: 9999px;
-            --angle: 45deg;
-            animation: drift linear infinite;
+          #stars, #stars2, #stars3 {
+              position:absolute;
+              top:0;
+              left:0;
+              right:0;
+              bottom:0;
+              width:100%;
+              height:100%;
+              display:block;
           }
 
-          .line:nth-child(1) {
-            width: 150px;
-            height: 2px;
-            --start-x: -20vw;
-            --start-y: 10vh;
-            --end-x: 120vw;
-            --end-y: 40vh;
-            animation-duration: 15s;
-            animation-delay: -2s;
+          #stars {
+              background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="p" width="300" height="300" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="hsl(var(--primary)/0.4)"/><circle cx="100" cy="150" r="1" fill="hsl(var(--primary)/0.4)"/><circle cx="250" cy="200" r="2" fill="hsl(var(--accent)/0.5)"/><circle cx="150" cy="280" r="1" fill="hsl(var(--primary)/0.4)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23p)"/></svg>') 0 0 / 300px 300px;
+              z-index: 1;
+              animation: move-twink-back 200s linear infinite;
           }
-          .line:nth-child(2) {
-            width: 200px;
-            height: 3px;
-            --start-x: -30vw;
-            --start-y: 80vh;
-            --end-x: 130vw;
-            --end-y: 20vh;
-            animation-duration: 20s;
-            animation-delay: -5s;
-            --angle: -35deg;
+
+          #stars2 {
+              background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="p" width="500" height="500" patternUnits="userSpaceOnUse"><circle cx="80" cy="120" r="2" fill="hsl(var(--primary)/0.5)"/><circle cx="300" cy="300" r="1" fill="hsl(var(--accent)/0.6)"/><circle cx="450" cy="100" r="1" fill="hsl(var(--primary)/0.5)"/><circle cx="200" cy="450" r="2" fill="hsl(var(--accent)/0.6)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23p)"/></svg>') 0 0 / 500px 500px;
+              z-index: 2;
+              animation: move-twink-back 150s linear infinite;
           }
-          .line:nth-child(3) {
-            width: 100px;
-            height: 1px;
-            --start-x: 120vw;
-            --start-y: 90vh;
-            --end-x: -20vw;
-            --end-y: 30vh;
-            animation-duration: 25s;
-            animation-delay: -10s;
+
+          #stars3 {
+              background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="p" width="800" height="800" patternUnits="userSpaceOnUse"><circle cx="200" cy="100" r="3" fill="hsl(var(--primary)/0.6)"/><circle cx="500" cy="600" r="2" fill="hsl(var(--accent)/0.7)"/><circle cx="750" cy="300" r="1" fill="hsl(var(--primary)/0.6)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23p)"/></svg>') 0 0 / 800px 800px;
+              z-index: 3;
+              animation: move-twink-back 100s linear infinite;
           }
-          .line:nth-child(4) {
-            width: 250px;
-            height: 2px;
-            --start-x: 50vw;
-            --start-y: 110vh;
-            --end-x: 30vw;
-            --end-y: -10vh;
-            animation-duration: 18s;
-            animation-delay: -1s;
-             --angle: 60deg;
+
+          @keyframes float {
+              0% {
+                  transform: translateY(0px) translateX(0px) rotate(0deg);
+              }
+              50% {
+                  transform: translateY(-20px) translateX(20px) rotate(10deg);
+              }
+              100% {
+                  transform: translateY(0px) translateX(0px) rotate(0deg);
+              }
           }
-           .line:nth-child(5) {
-            width: 180px;
-            height: 2px;
-            --start-x: -10vw;
-            --start-y: 50vh;
-            --end-x: 110vw;
-            --end-y: 60vh;
-            animation-duration: 22s;
-            animation-delay: -12s;
-             --angle: -20deg;
+
+          .planet {
+              position: absolute;
+              border-radius: 50%;
+              animation: float 10s ease-in-out infinite;
+              box-shadow: 0 0 20px 5px hsl(var(--primary) / 0.1), inset 0 0 15px hsl(var(--background) / 0.5);
+              z-index: 4;
+          }
+
+          .planet-1 {
+              width: 80px;
+              height: 80px;
+              top: 15%;
+              left: 10%;
+              background-color: hsl(var(--accent) / 0.2);
+              animation-duration: 12s;
+          }
+
+          .planet-2 {
+              width: 40px;
+              height: 40px;
+              top: 70%;
+              right: 20%;
+              background-color: hsl(var(--primary) / 0.3);
+              animation-duration: 8s;
+              animation-delay: -3s;
+          }
+
+          .planet-3 {
+              width: 120px;
+              height: 120px;
+              top: 60%;
+              left: 15%;
+              background-color: hsl(var(--secondary) / 0.4);
+              animation-duration: 15s;
+              animation-delay: -6s;
           }
         `}</style>
         <p className="text-xl md:text-2xl text-accent font-semibold mb-8 animate-in fade-in slide-in-from-top-16 duration-700 delay-200 ease-out">
