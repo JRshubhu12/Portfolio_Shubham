@@ -10,8 +10,8 @@ const HeroSection = () => {
       id="home"
       className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 py-20 md:py-28"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight animate-in fade-in slide-in-from-top-12 duration-700 ease-out">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-text-gradient">
             Shubham Choudhary
           </span>
@@ -30,13 +30,13 @@ const HeroSection = () => {
             animation: text-gradient 5s ease infinite;
           }
         `}</style>
-        <p className="text-xl md:text-2xl text-accent font-semibold mb-8">
+        <p className="text-xl md:text-2xl text-accent font-semibold mb-8 animate-in fade-in slide-in-from-top-16 duration-700 delay-200 ease-out">
           Building Intelligent Web & Mobile Solutions.
         </p>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-in fade-in slide-in-from-top-20 duration-700 delay-300 ease-out">
           Passionate about crafting elegant and efficient applications that solve real-world problems and drive innovation.
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 animate-in fade-in slide-in-from-top-24 duration-700 delay-400 ease-out">
           <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
             <Link href="#projects">
               View My Work <ArrowRight className="ml-2 h-5 w-5" />
