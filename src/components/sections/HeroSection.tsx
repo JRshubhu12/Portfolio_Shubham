@@ -137,12 +137,12 @@ const HeroSection = () => {
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
             <a
-              href="/images/shubham%20choudhary.pdf"
+              href="/images/Shubham_Choudhary.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"
             >
-              View CV <Download className="ml-2 h-5 w-5" />
+              View Resume<Download className="ml-2 h-5 w-5" />
             </a>
 
           </Button>
