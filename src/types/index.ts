@@ -17,6 +17,7 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number; // 0-100 for proficiency indicator
+  icon?: React.ReactNode;
 }
 
 export interface SkillCategory {

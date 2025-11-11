@@ -1,5 +1,5 @@
 
-import type { Project, SkillCategory, Experience } from '@/types';
+import type { Project, Experience } from '@/types';
 
 export const projectsData: Project[] = [
   {
@@ -128,76 +128,6 @@ export const projectsData: Project[] = [
     impact: 'Increased user engagement with daily inspirational content.',
     imageUrl: '/images/quote.png',
     imageHint: 'mobile ui',
-  },
-];
-
-export const skillsData: SkillCategory[] = [
-  {
-    name: 'Languages',
-    skills: [
-      { name: 'JavaScript', level: 90 },
-      { name: 'Python', level: 85 },
-      { name: 'TypeScript', level: 80 },
-      { name: 'HTML', level: 95 },
-      { name: 'CSS', level: 90 },
-      { name: 'MERN Stack', level: 85 },
-    ],
-  },
-  {
-    name: 'Front-End',
-    skills: [
-      { name: 'React', level: 90 },
-      { name: 'Next.js', level: 80 },
-      { name: 'Tailwind CSS', level: 85 },
-      { name: 'Redux', level: 75 },
-    ],
-  },
-  {
-    name: 'Back-End',
-    skills: [
-      { name: 'Node.js', level: 85 },
-      { name: 'Express.js', level: 80 },
-      { name: 'Python (Flask)', level: 75 },
-      { name: 'REST APIs', level: 90 },
-    ],
-  },
-  {
-    name: 'Databases',
-    skills: [
-      { name: 'Firebase', level: 85 },
-      { name: 'MySQL', level: 70 },
-      { name: 'PostgreSQL', level: 65 },
-      { name: 'MongoDB', level: 75 },
-    ],
-  },
-  {
-    name: 'AI/ML',
-    skills: [
-      { name: 'Scikit-learn', level: 80 },
-      { name: 'TensorFlow', level: 70 },
-      { name: 'PyTorch', level: 65 },
-      { name: 'Seaborn', level: 75 },
-      { name: 'Pandas', level: 85 },
-      { name: 'Numpy', level: 85 },
-      { name: 'Genkit', level: 70 },
-    ],
-  },
-  {
-    name: 'Mobile Development',
-    skills: [
-      { name: 'React Native', level: 80 },
-      { name: 'Flutter', level: 70 },
-      { name: 'Capacitor', level: 60 },
-    ],
-  },
-  {
-    name: 'Tools & Other',
-    skills: [
-      { name: 'Git & GitHub', level: 90 },
-      { name: 'VS Code', level: 95 },
-      { name: 'Postman', level: 85 },
-      { name: 'Docker', level: 60 },
-    ],
   },
 ];
 
