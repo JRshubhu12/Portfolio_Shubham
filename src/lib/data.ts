@@ -11,7 +11,7 @@ export const projectsData: Project[] = [
     features: ['User registration & profiles', 'Blood donation camp scheduling', 'Urgent blood requests', 'Inventory management'],
     technologies: ['React', 'Node.js', 'Express', 'Firebase', 'Material UI'],
     impact: 'Facilitated faster blood matching for critical patients.',
-    imageUrl: '/images/Raktacure.png',
+    imageUrl: '/images/raktacure-project-new.jpg',
     imageHint: 'medical technology',
     githubLink: 'https://github.com/shubhamchoudharyjr/raktacure',
     liveLink: 'https://raktacure.ai/',
@@ -51,7 +51,7 @@ export const projectsData: Project[] = [
     features: ['Secure medical document storage', 'AI-powered medicine reminders', 'Health AI for medication guidance', 'Nearby health facility locator', 'Health analytics and monitoring'],
     technologies: ['Flutter', 'Android Studio', 'Supabase', 'Genkit'],
     impact: 'Empowering families to manage their health proactively with an all-in-one digital solution.',
-    imageUrl: '/images/DHB.png',
+    imageUrl: '/images/digital-health-bharat.png',
     imageHint: 'digital healthcare',
     liveLink: 'https://www.digitalhealthbharat.com/',
   },
@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
     impact: 'Makes meal decisions quick, easy, and enjoyable by offering smart, tailored food suggestions.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'food app AI',
-    liveLink: 'https://cravebuddy.netlify.app',
+    liveLink: 'https://bit.ly/CarveMate',
   },
   {
     id: 'quote-app',
@@ -249,5 +249,6 @@ export const navLinks = [
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
+  { href: '#analyzer', label: 'Analyzer' },
   { href: '#contact', label: 'Contact' },
 ];
