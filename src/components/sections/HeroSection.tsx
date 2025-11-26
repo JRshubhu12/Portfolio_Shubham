@@ -1,10 +1,46 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Download, Github } from 'lucide-react';
+import { ArrowRight, Download, Github, Code } from 'lucide-react';
 
 const HeroSection = () => {
+  const roles = [
+    'Full Stack Developer',
+    'AI/ML Enthusiast',
+    'Android Developer',
+    'Database Management',
+  ];
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [displayedRole, setDisplayedRole] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const fullRole = roles[currentRoleIndex];
+      if (isDeleting) {
+        setDisplayedRole(fullRole.substring(0, displayedRole.length - 1));
+      } else {
+        setDisplayedRole(fullRole.substring(0, displayedRole.length + 1));
+      }
+
+      if (!isDeleting && displayedRole === fullRole) {
+        // Pause at end of word
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && displayedRole === '') {
+        setIsDeleting(false);
+        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      }
+    };
+
+    const typingSpeed = isDeleting ? 100 : 150;
+    const timer = setTimeout(handleTyping, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [displayedRole, isDeleting, currentRoleIndex, roles]);
+
+
   return (
     <section
       id="home"
@@ -25,8 +61,9 @@ const HeroSection = () => {
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-text-gradient">
             Shubham Choudhary
           </span>
-          <span className="block text-3xl md:text-5xl lg:text-6xl text-foreground mt-3">
-            Full Stack Developer
+          <span className="block text-3xl md:text-5xl lg:text-6xl text-foreground mt-3 h-16 md:h-20">
+             {displayedRole}
+            <span className="animate-pulse">|</span>
           </span>
         </h1>
         <style jsx global>{`
@@ -144,11 +181,15 @@ const HeroSection = () => {
             >
               View Resume<Download className="ml-2 h-5 w-5" />
             </a>
-
           </Button>
           <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
-            <Link href="https://github.com/JRshubhu12" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/shubhamchoudharyjr" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" /> GitHub
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
+            <Link href="https://www.hackerrank.com/profile/shubhamchoudha51" target="_blank" rel="noopener noreferrer">
+              <Code className="mr-2 h-5 w-5" /> HackerRank
             </Link>
           </Button>
           <Button asChild variant="secondary" size="lg" className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105">
@@ -163,3 +204,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+    
